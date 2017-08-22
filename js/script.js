@@ -97,7 +97,6 @@ window.onload = function() {
 	}
 
 	function checkGameState(playerPoints, computerPoints) {
-		console.log('sprawdzam');
 		var weHaveWinner = true;
 		playerPoints > 9 ? winningAlertHeading.innerHTML += player.name + "!" : computerPoints > 9 ? winningAlertHeading.innerHTML += "computer!" : weHaveWinner = false;
 		if(weHaveWinner) {
