@@ -31,11 +31,13 @@ window.onload = function() {
 	        pickElem.style.display = 'block';
 	        resultsElem.style.display = 'block';
 	        winningAlert.style.display = 'none';
+	        winningAlertHeading.innerHTML = "";
 	      break;
 	    case 'ended':
 	        newGameBtn.innerText = 'Once again?';
 	        newGameElem.style.display = 'block';
 	        winningAlert.style.display = 'block';
+	        playerPointsElem.innerHTML = computerPointsElem.innerHTML = 0;
 	      break;
 	    case 'notStarted':
 	    default:
@@ -98,7 +100,9 @@ window.onload = function() {
 
 	function checkGameState(playerPoints, computerPoints) {
 		var weHaveWinner = true;
-		playerPoints > 9 ? winningAlertHeading.innerHTML += player.name + "!" : computerPoints > 9 ? winningAlertHeading.innerHTML += "computer!" : weHaveWinner = false;
+		var textWhenPlayerWon = "Well done " + player.name + "!. <strong style='color:blue'>You won " + player.score + " to " + computer.score + ". Grats.</strong>";
+		var textWhenComputerWon = "Well done computer!<strong style='color:blue'> You won " + computer.score + " to " + player.score + ". Grats.</strong>";
+		playerPoints > 9 ? winningAlertHeading.innerHTML += textWhenPlayerWon : computerPoints > 9 ? winningAlertHeading.innerHTML += textWhenComputerWon : weHaveWinner = false;
 		if(weHaveWinner) {
 			gameState = 'ended';
 			setGameElements();
