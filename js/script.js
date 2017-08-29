@@ -89,6 +89,9 @@ window.onload = function() {
 	    } else if (winnerIs == 'computer') {
 	        computerResultElem.innerHTML = "Win!";
 	        computer.score++;
+	    } else {
+	    	playerResultElem.innerHTML = "Draw!";
+	        computerResultElem.innerHTML = "Draw!";
 	    }
 	}
 
