@@ -38,6 +38,10 @@ window.onload = function() {
 	        newGameElem.style.display = 'block';
 	        winningAlert.style.display = 'block';
 	        playerPointsElem.innerHTML = computerPointsElem.innerHTML = 0;
+	        playerPickElem.innerHTML = "Player selection";
+	        computerPickElem.innerHTML = "Computer selection";
+	        playerResultElem.innerHTML = "Player Score";
+	        computerResultElem.innerHTML = "Computer Score";
 	      break;
 	    case 'notStarted':
 	    default:
